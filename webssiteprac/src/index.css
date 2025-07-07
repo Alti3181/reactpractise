@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* === Dual-Range Slider === */
+.range-thumb {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 100%;
+  background: transparent;
+  position: absolute;
+  top: 0;
+  height: 32px;
+  pointer-events: none; /* Allow overlapping thumbs */
+}
+
+/* Webkit (Chrome, Safari) */
+.range-thumb::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  background: white;
+  cursor: pointer;
+  pointer-events: auto;
+  position: relative;
+  top: 0px; /* 👈 PERFECT vertical alignment */
+}
+
+/* Firefox */
+.range-thumb::-moz-range-thumb {
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  background: white;
+  cursor: pointer;
+  pointer-events: auto;
+}
