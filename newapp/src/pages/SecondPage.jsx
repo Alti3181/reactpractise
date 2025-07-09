@@ -11,7 +11,7 @@ export default function SecondPage() {
     return (
       <>
         <Navbar />
-        <div className="text-white p-6">
+        <div className="text-black dark:text-white p-6">
           <p>❌ No article data found.</p>
           <button
             className="mt-4 bg-blue-600 px-4 py-2 rounded"
@@ -29,7 +29,7 @@ export default function SecondPage() {
   return (
     <>
       <Navbar />
-      <div className="bg-[#666363] min-h-screen text-white p-6">
+      <div className="bg-white dark:bg-[#121212] min-h-screen text-black dark:text-white p-6">
         <div className="max-w-3xl mx-auto">
           {article.urlToImage && (
             <img
@@ -40,7 +40,7 @@ export default function SecondPage() {
           )}
           <h1 className="text-2xl font-bold mb-2">{article.title}</h1>
 
-          <p className="text-sm text-gray-300 mb-2">
+          <p className="text-sm text-gray-700 dark:text-gray-300 mb-2">
             <span>By: {article.author || "Unknown"}</span> |{" "}
             <span>{article.source.name}</span> | <span>{publishedDate}</span>
           </p>
@@ -50,7 +50,7 @@ export default function SecondPage() {
           </p>
 
           <div className="relative mt-10">
-            <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-[#666363] to-transparent blur-sm pointer-events-none"></div>
+            <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-white dark:from-[#121212] to-transparent blur-sm pointer-events-none"></div>
             <a
               href={article.url}
               target="_blank"

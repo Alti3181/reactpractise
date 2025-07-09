@@ -9,7 +9,7 @@ export default function Card({ article, loading }) {
 
   if (loading) {
     return (
-      <div className="bg-[#1e1e1e] rounded-lg shadow-md h-48 animate-pulse"></div>
+      <div className="bg-gray-200 dark:bg-[#1e1e1e] rounded-lg shadow-md h-48 animate-pulse"></div>
     );
   }
 
@@ -23,7 +23,7 @@ export default function Card({ article, loading }) {
   return (
     <div
       onClick={handleClick}
-      className="bg-[#1e1e1e] rounded-lg shadow-md overflow-hidden flex flex-col cursor-pointer hover:scale-[1.01] transition"
+      className="bg-white dark:bg-[#1e1e1e] text-black dark:text-white rounded-lg shadow-md overflow-hidden flex flex-col cursor-pointer hover:scale-[1.01] transition"
     >
       {article.urlToImage && (
         <img
@@ -34,10 +34,10 @@ export default function Card({ article, loading }) {
       )}
       <div className="p-3 flex flex-col justify-between h-full">
         <h2 className="text-lg font-semibold line-clamp-2">{article.title}</h2>
-        <p className="text-sm text-gray-400 mt-2 line-clamp-3">
+        <p className="text-sm text-gray-700 dark:text-gray-400 mt-2 line-clamp-3">
           {article.description}
         </p>
-        <div className="mt-3 text-xs text-gray-400 flex justify-between items-center">
+        <div className="mt-3 text-xs text-gray-600 dark:text-gray-400 flex justify-between items-center">
           <span>{article.source?.name || "Unknown Source"}</span>
           <span>{publishedDate}</span>
         </div>
