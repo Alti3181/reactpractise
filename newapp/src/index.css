@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Optional: Apply colors using CSS variables */
+
+:root.light {
+  --bg: #ffffff;
+  --card: #ffe5e5;
+  --text: #000000;
+  --accent: #ff4d4d;
+}
+
+:root.dark {
+  --bg: #121212;
+  --card: #1e1e1e;
+  --text: #ffffff;
+  --accent: #2563eb;
+}
+
+body {
+  @apply bg-[var(--bg)] text-[var(--text)];
+}
+
+html {
+  transition: background 0.3s ease, color 0.3s ease;
+}
