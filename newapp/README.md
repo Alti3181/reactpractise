@@ -17,5 +17,7 @@ If you are developing a production application, we recommend using TypeScript wi
 
 
 
+DARK MODE
+
 
 ![image alt](https://github.com/Alti3181/reactpractise/blob/a3ef7767b867eb3c82df6cf797dca90acc5bc90d/newapp/Capture22.PNG)
